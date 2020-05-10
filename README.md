@@ -1,9 +1,9 @@
 # buildJetsonXavierKernel
-This work is based on Jetsonhack's solution on building kernel for TX2. I haven't tested on my Jetson Xavier yet, please let me know if there is any issue.
+This work is based on Jetsonhack's solution on building kernel for TX2. I have verified that it works on my Jetson Xavier.
 
-Scripts to help build the 4.9 kernel and modules onboard the Jetson Xavier (L4T 31.0.1, JetPack ). For previous versions, visit the 'tags' section.
+Scripts to help build the 4.9 kernel and modules onboard the Jetson Xavier (L4T 32.4.2, JetPack 4.4DP). For previous versions, visit the 'tags' section.
 
-<em><strong>Note:</strong> The kernel source version must match the version of firmware flashed on the Jetson. For example, the source for the 4.9 kernel here is matched with L4T 31.0.1. This kernel compiled using this source tree will not work with newer versions or older versions of L4T, only 31.0.1.</em>
+<em><strong>Note:</strong> The kernel source version must match the version of firmware flashed on the Jetson. For example, the source for the 4.9 kernel here is matched with L4T 32.4.2. This kernel compiled using this source tree will not work with newer versions or older versions of L4T, only 32.4.2.</em>
 
 As of this writing, the "official" way to build the Jetson TX2 kernel is to use a cross compiler on a Linux PC. This is an alternative which builds the kernel onboard the Jetson itself. These scripts will download the kernel source to the Jetson TX2, and then compile the kernel and selected modules. The newly compiled kernel can then be installed. The kernel sources and build objects consume ~3GB.
 
@@ -40,6 +40,11 @@ Special thanks to Raffaello Bonghi (https://github.com/rbonghi) for jetson_easy 
 Special thanks to Shreeyak (https://github.com/Shreeyak) for discussing alternatives to get source directly from NVIDIA git repositories.
 
 ### Release Notes
+May, 2020
+* vL32.4.2
+* L4T 32.4.2 (Jetpack 4.4DP)
+** I have confirmed this works on the currently released Jetpack 4.4.
+
 Oct, 2018
 * vL4T31.0.1
 * L4T 31.0.1 (JetPack 4.0)
